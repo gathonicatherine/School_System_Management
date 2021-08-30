@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student</title>
+</head>
+<body>
+    <table>
+        {%for student in students%}
+        <tr>
+            
+            <th>FIRST_NAME</th>
+            <th>LAST_NAME</th>
+            <th>AGE</th>   
+            <td>{{student.FIRST_NAME}}</td>
+            <td>{{student.LAST_NAME}}</td>
+            <td>{{student.AGE}}</td>        
+        </tr>
+        {%endfor%}
+    </table>
+    <style>
+      body{
+          background-color: #ebbcbd;
+          
+          display: flex;
+          justify-content: center;
+          
+      }  
+      form{
+          max-width: 350px;
+          background-color: #d05a5a;
+          border: #141214;
+          font-family: sans-serif;
+          font-size: medium;
+      }
+      input{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-left: 50px;
+          padding: 15px;
+      }
+      
+    </style>
+    <form method="POST" enctype="multipart/form-data">
+        <h1>AKIRACHIX REGISTRATION FORM</h1>
+        {%csrf_token%}
+        {{form.as_p}} 
+        <button>SUBMIT</button>     
+    </form>  
+
+</body>
+</html>

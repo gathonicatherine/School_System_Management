@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .table {
+            border-collapse: collapse;
+            margin: 30px 0;
+            font-size: 1.0em;
+            font-family: sans-serif;
+            min-width: 500px;
+            box-shadow: 1 1 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .table thead tr {
+            background-color: #009879;
+            color: #ffffff;
+            text-align: left;
+        }
+        
+        table th,
+       table td {
+            padding: 12px 15px;
+        }
+        
+        .table tbody tr {
+            border-bottom: 1px solid #dddddd;
+        }
+        
+        .table tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+        
+        .table tbody tr:last-of-type {
+            border-bottom: 2px solid #009879;
+        }
+        
+        .table tbody tr.active-row {
+            font-weight: bold;
+            color: #009879;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Trainer's Table</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>phone Number</th>
+                <th>Courses</th>
+                <th>Trainer's Id</th>
+                <th>Number of lessons attended</th>
+                <th>Bank Account</th>
+                <th>Profession</th>
+                <th>Contract</th>
+                <th>CV</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            {% for trainer in trainers%}
+            <tr>
+                <td>{{trainer.Name}}</td>
+                <td>{{trainer.Email}}</td>
+                <td>{{trainer.Id}}</td>
+                <td>{{trainer.Courses}}</td>
+                <td>{{trainer.Number of lessons attended}}</td>
+                <td>{{trainer.Bank Account}}</td>
+                <td>{{trainer.Profession}}</td>
+                <td>{{trainer.Contract}}</td>
+                <td>{{trainer.Gender}}</td>
+                <td>{{trainer.CV}}</td>
+                <td>{{trainer.phone Number}}</td>
+            </tr>
+            {%endfor%}
+            <!-- and so on... -->
+        </tbody>
+    </table>
+</body>
+
+</html>

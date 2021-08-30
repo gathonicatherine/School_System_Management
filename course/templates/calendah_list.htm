@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .table {
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.9em;
+            font-family: sans-serif;
+            min-width: 400px;
+            box-shadow: 0 0 20px rgba(209, 136, 136, 0.15);
+        }
+        
+        .table thead tr {
+            background-color: #009879;
+            color: #522626;
+            text-align: left;
+        }
+        
+        .table th,
+        .styled-table td {
+            padding: 15px 20px;
+        }
+        
+        .table tbody tr {
+            border-bottom: 1px solid #cc5252;
+        }
+        
+        .table tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+        
+        .styled-table tbody tr:last-of-type {
+            border-bottom: 2px solid #9ebeb8;
+        }
+        
+        .table tbody tr.active-row {
+            font-weight: bold;
+            color: #fdffff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Calendah Table</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Event_Title</th>
+                <th>Event_Organizer</th>
+                <th>Event signed By</th>
+                <th>Event Month</th>
+                <th>Event Date</th>
+                <th>Event Approved By</th>
+                <th>Event Participants</th>
+                <th>Event Agenda</th>
+                <th>Venue</th>
+                <th>Event Budget</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in students%}
+            <tr>
+                <td>{{calendah.Event_Title}}</td>
+                <td>{{calendah.Event_Organizer}}</td>
+                <td>{{calendah.Event signed By}}</td>
+                <td>{{calendah.Event Month}}</td>
+                <td>{{calendah.Event Date}}</td>
+                <td>{{calendah.Event Approved By}}</td>
+                <td>{{calendah.Event Participants}}</td>
+                <td>{{calendah.Agenda}}</td>
+                <td>{{calendah.Venue}}</td>
+                <td>{{calendah.Event Budget}}</td>
+            </tr>
+            {%endfor%}
+            <!-- and so on... -->
+        </tbody>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE htm>
+<html>
+
+<head>
+    <style>
+        .table {
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 1.0em;
+            font-family: sans-serif;
+            min-width: 300px;
+            box-shadow: 1 1 20px rgba(228, 128, 128, 0.15);
+        }
+        
+        .table thead tr {
+            background-color: #ca63df;
+            color: #ffffff;
+            text-align: left;
+        }
+        
+        .table th,
+        .styled-table td {
+            padding: 12px 15px;
+        }
+        
+        .table tbody tr {
+            border-bottom: 1px solid #dddddd;
+        }
+        
+        .table tbody tr:nth-of-type(even) {
+            background-color: #b99c9c;
+        }
+        
+        .styled-table tbody tr:last-of-type {
+            border-bottom: 2px solid #99e9d9;
+        }
+        
+        .table tbody tr.active-row {
+            font-weight: bold;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Student Table</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>First_name</th>
+                <th>Last_name</th>
+                <th>Age</th>
+                <th>id_number</th>
+                <th>nationality</th>
+                <th>phone_number</th>
+                <th>room_number</th>
+                <th>class_name</th>
+                <th>big_sister</th>
+                <th>mentor_name</th>
+                <th>email_address</th>
+                <th>gender</th>
+                <th>county</th>
+                <th>laptop_serial_number</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in students%}
+            <tr>
+                <td>{{student.first_name}}</td>
+                <td>{{student.last_name}}</td>
+                <td>{{student.id_number}}</td>
+                <td>{{student.age}}</td>
+                <td>{{student.nationality}}</td>
+                <td>{{student.phone_number}}</td>
+                <td>{{student.room_number}}</td>
+                <td>{{student.class_name}}</td>
+                <td>{{student.big_sister}}</td>
+                <td>{{student.mentor_name}}</td>
+                <td>{{student.email_address}}</td>
+                <td>{{student.gender}}</td>
+                <td>{{student.county}}</td>
+                <td>{{student.laptop_serial_number}}</td>
+            </tr>
+            {% endfor %}
+            <!-- and so on... -->
+        </tbody>
+    </table>
+</body>
+
+</html>
