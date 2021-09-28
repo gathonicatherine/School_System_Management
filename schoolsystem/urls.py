@@ -19,11 +19,11 @@ from django.urls.conf import include
 
 
 urlpatterns = [
+    path('', include('Core.urls')),
     path('admin/', admin.site.urls),
     path("student/", include("student.urls")),
-     path("trainer/", include("trainer.urls")),
-     path("course/", include("course.urls")),
-     path("calendah/", include("calendah.urls")),
-
-    
+    path("trainer/", include("trainer.urls")),
+    path("course/", include("course.urls")),
+    path("calendah/", include("calendah.urls")),
+    path("api/", include("api.urls")),    
 ]

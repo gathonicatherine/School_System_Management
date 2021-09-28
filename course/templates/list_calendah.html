@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COURSES</title>
+</head>
+<body>
+<h1> CodeHive Courses</h1>
+   {% block content %}
+   {{ calendar }}
+   {% endblock %}
+  
+   <style>
+  
+   h1{
+       text-align: center;
+       color: purple;
+   }
+   .calendar {
+     width:78%;
+     margin: auto;
+     font-size: 13px;
+   }
+  
+   .calendar tr, .calendar td {
+     border: 1px solid purple;
+   }
+  
+   .calendar th {
+     padding: 10px;
+     text-align: center;
+     font-size: 18px;
+   }
+  
+   .calendar td {
+     width: 70px;
+     height: 50px;
+     padding: 20px 0px 0px 5px;
+   }
+  
+   .month {
+     font-size: 25px;
+   }
+  
+   .date {
+     font-size: 16px;
+   }
+  
+   ul {
+     height: 100%;
+     padding: 0px 5px 0px 20px;
+   }
+  
+   a {
+     color:purple;
+   }
+  </style>
+  </body>
+</html>

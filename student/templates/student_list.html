@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+<body>
+<h1>Student Courses</h1>
+   {% block content %}
+   {{ calendar }}
+   {% endblock %}
+  
+   <style>
+  
+   h1{
+       text-align: center;
+       color: purple;
+   }
+   .student {
+     width:78%;
+     margin: auto;
+     font-size: 13px;
+   }
+  
+   .student tr, .calendar td {
+     border: 1px solid purple;
+   }
+  
+   .student th {
+     padding: 10px;
+     text-align: center;
+     font-size: 18px;
+   }
+  
+   .student td {
+     width: 70px;
+     height: 50px;
+     padding: 20px 0px 0px 5px;
+   }
+  
+   {% comment %} .month {
+     font-size: 25px;
+   }
+  
+   .date {
+     font-size: 16px;
+   }
+  
+   ul {
+     height: 100%;
+     padding: 0px 5px 0px 20px;
+   }
+  
+   a {
+     color:purple;
+   } {% endcomment %}
+  </style>
+  </body>
+</html>
+    

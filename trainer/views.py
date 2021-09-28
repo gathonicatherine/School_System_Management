@@ -1,5 +1,6 @@
 from django.shortcuts import render
 
+
 # Create your views here.
 from .forms import TrainerRegistrationForm
 def register_trainer(request):
@@ -11,4 +12,4 @@ def register_trainer(request):
             print(form.errors)
     else:
         form=TrainerRegistrationForm()
-    return render(request, "register_trainer.htm", {'form':form})                
+    return render(request, "register_trainer.html", {'form':form})                

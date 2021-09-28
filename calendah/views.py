@@ -47,3 +47,4 @@ def event(request, event_id=None):
        return redirect('cal:calender')
       
    return render(request, 'add_event.html', {'form': form})
+   

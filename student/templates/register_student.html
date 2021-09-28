@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student</title>
+
+<body>
+ {% comment %} .table {
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.9em;
+            font-family: sans-serif;
+            min-width: 400px;
+            box-shadow: 0 0 20px rgba(209, 136, 136, 0.15);
+        }
+        
+        .table thead tr {
+            background-color: #009879;
+            color: #522626;
+            text-align: left;
+        }
+        
+        .table th,
+        .styled-table td {
+            padding: 15px 20px;
+        }
+        
+        .table tbody tr {
+            border-bottom: 1px solid #cc5252;
+        }
+        
+        .table tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+        
+        .styled-table tbody tr:last-of-type {
+            border-bottom: 2px solid #9ebeb8;
+        }
+        
+        .table tbody tr.active-row {
+            font-weight: bold;
+            color: #fdffff;
+        } {% endcomment %}
+    <table>
+        {%for student in students%}
+        <tr>
+            
+            <th>FIRST_NAME</th>
+            <th>LAST_NAME</th>
+            <th>AGE</th>   
+            <td>{{student.FIRST_NAME}}</td>
+            <td>{{student.LAST_NAME}}</td>
+            <td>{{student.AGE}}</td>        
+        </tr>
+        {%endfor%}
+    </table>
+
+</head>
+   <body>
+    <div class="div">
+        <div class="form">
+            <h1 class="head">AkiraChix Registration Form</h1>
+            <form method="POST">
+                <h4>{{student.first_name}}</h4>
+                <h4>{{student.last_name}}</h4>
+                <h4>{{student.age}}</h4>
+
+                {%csrf_token%} {{form.as_p}}
+                <input type="submit" value="Submit" class="sub">
+            </form>
+        </div>
+    </div>
+</body>
+</body>
+</html>
